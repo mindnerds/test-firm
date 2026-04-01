@@ -7,6 +7,21 @@ Turborepo monorepo with:
 
 ## Conventions
 - CSS variables for theming in `packages/ui/src/styles/globals.css`
-- All color tokens use OKLCH format
-- Primary color is green (hue ~120)
-- Build with: `pnpm run build:web`
+- The web app copies this to `apps/web/packages-ui-styles.css` — update BOTH files when changing colors
+- All color tokens use hex format (e.g. #22c55e)
+- Primary color is currently green (#22c55e)
+
+## Build
+```bash
+pnpm run build:web
+```
+
+## Integration Tests
+Tests live in `apps/web/tests/`. Run with:
+```bash
+cd apps/web && npx playwright install --with-deps chromium && npx playwright test
+```
+
+## Important
+- When changing CSS variables, update BOTH `packages/ui/src/styles/globals.css` AND `apps/web/packages-ui-styles.css`
+- Always commit and push after changes
