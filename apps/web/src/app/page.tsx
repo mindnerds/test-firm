@@ -1,43 +1,29 @@
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
-      <nav className="w-full bg-primary text-primary-foreground py-3 px-6 flex justify-between items-center fixed top-0">
-        <h1 className="font-bold text-lg">Test Firm</h1>
-        <a href="/contact" className="bg-primary-foreground text-primary px-4 py-2 rounded-md text-sm font-medium hover:opacity-90">
-          Contact Us
-        </a>
+    <main>
+      <nav style={{ width: "100%", background: "var(--primary)", color: "var(--primary-foreground)", padding: "12px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "fixed", top: 0, zIndex: 10 }}>
+        <h1 style={{ fontWeight: "bold", fontSize: "1.25rem" }}>Test Firm</h1>
+        <a href="/contact" style={{ background: "var(--primary-foreground)", color: "var(--primary)", padding: "8px 16px", borderRadius: "6px", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>Contact Us</a>
       </nav>
-      <div className="text-center space-y-6 mt-20">
-        <h2 className="text-5xl font-bold">Welcome to Test Firm</h2>
-        <p className="text-xl text-muted-foreground max-w-2xl">
-          We are a professional services company dedicated to excellence.
-        </p>
-        <div className="flex gap-4 justify-center">
-          <a href="/services" className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90">
-            Our Services
-          </a>
-          <a href="/about" className="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary/10">
-            About Us
-          </a>
+      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
+        <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "16px" }}>Welcome to Test Firm</h2>
+        <p style={{ fontSize: "1.25rem", color: "var(--muted-foreground)", maxWidth: "600px", marginBottom: "32px" }}>We are a professional services company dedicated to excellence.</p>
+        <div style={{ display: "flex", gap: "16px" }}>
+          <a href="/services" style={{ background: "var(--primary)", color: "var(--primary-foreground)", padding: "12px 24px", borderRadius: "8px", fontWeight: 500, textDecoration: "none" }}>Our Services</a>
+          <a href="/about" style={{ border: "2px solid var(--primary)", color: "var(--primary)", padding: "12px 24px", borderRadius: "8px", fontWeight: 500, textDecoration: "none" }}>About Us</a>
         </div>
       </div>
-      <section className="mt-24 grid grid-cols-3 gap-8 max-w-5xl px-6">
-        <div className="bg-card border border-border rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-primary mb-2">Service One</h3>
-          <p className="text-muted-foreground text-sm">High quality professional consulting for your business needs.</p>
-        </div>
-        <div className="bg-card border border-border rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-primary mb-2">Service Two</h3>
-          <p className="text-muted-foreground text-sm">Strategic planning and implementation support.</p>
-        </div>
-        <div className="bg-card border border-border rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-primary mb-2">Service Three</h3>
-          <p className="text-muted-foreground text-sm">End-to-end project management and delivery.</p>
-        </div>
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", maxWidth: "960px", margin: "0 auto", padding: "0 24px 64px" }}>
+        {["Service One", "Service Two", "Service Three"].map((name) => (
+          <div key={name} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "8px", padding: "24px" }}>
+            <h3 style={{ color: "var(--primary)", fontSize: "1.125rem", fontWeight: 600, marginBottom: "8px" }}>{name}</h3>
+            <p style={{ color: "var(--muted-foreground)", fontSize: "0.875rem" }}>High quality professional consulting for your business needs.</p>
+          </div>
+        ))}
       </section>
-      <footer className="mt-24 py-8 border-t border-border w-full text-center text-sm text-muted-foreground">
+      <footer style={{ padding: "32px", borderTop: "1px solid var(--border)", textAlign: "center", fontSize: "0.875rem", color: "var(--muted-foreground)" }}>
         <p>&copy; 2026 Test Firm. All rights reserved.</p>
-        <p className="mt-1">(555) 123-4567 &middot; info@test-firm.com</p>
+        <p>(555) 123-4567 · info@test-firm.com</p>
       </footer>
     </main>
   );
