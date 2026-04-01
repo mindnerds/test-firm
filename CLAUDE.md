@@ -8,5 +8,5 @@ Turborepo monorepo with:
 ## Conventions
 - CSS variables for theming in `packages/ui/src/styles/globals.css`
 - All color tokens use OKLCH format
-- Primary color is green (hue ~120)
+- Primary color is blue (hue ~260)
 - Build with: `pnpm run build:web`
