@@ -13,6 +13,24 @@ export default function Home() {
           <a href="/about" style={{ border: "2px solid var(--primary)", color: "var(--primary)", padding: "12px 24px", borderRadius: "8px", fontWeight: 500, textDecoration: "none" }}>About Us</a>
         </div>
       </div>
+      <section style={{ padding: "64px 24px" }}>
+        <h3 style={{ fontSize: "2rem", fontWeight: "bold", textAlign: "center", marginBottom: "48px" }}>What Our Customers Say</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", maxWidth: "960px", margin: "0 auto" }}>
+          {[
+            { quote: "Working with Test Firm has been an absolute game-changer for our business. Their expertise and professionalism exceeded our expectations.", name: "Sarah Johnson", company: "TechStart Inc." },
+            { quote: "The team at Test Firm delivered exceptional results on time and within budget. I highly recommend their services to anyone seeking quality solutions.", name: "Michael Chen", company: "Global Solutions LLC" },
+            { quote: "Test Firm's innovative approach helped us solve complex challenges we had been struggling with for years. Truly remarkable work!", name: "Emily Rodriguez", company: "Innovate Corp" }
+          ].map((testimonial, index) => (
+            <div key={index} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "8px", padding: "24px", display: "flex", flexDirection: "column", height: "100%" }}>
+              <p style={{ fontSize: "0.9375rem", color: "var(--muted-foreground)", fontStyle: "italic", marginBottom: "16px", flexGrow: 1 }}>"{testimonial.quote}"</p>
+              <div>
+                <p style={{ fontWeight: 600, color: "var(--foreground)", marginBottom: "4px" }}>{testimonial.name}</p>
+                <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)" }}>{testimonial.company}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
       <section style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", maxWidth: "960px", margin: "0 auto", padding: "0 24px 64px" }}>
         {["Service One", "Service Two", "Service Three"].map((name) => (
           <div key={name} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "8px", padding: "24px" }}>
