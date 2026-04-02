@@ -1,10 +1,9 @@
+import Header from "./Header";
+
 export default function Home() {
   return (
     <main>
-      <nav style={{ width: "100%", background: "var(--primary)", color: "var(--primary-foreground)", padding: "12px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "fixed", top: 0, zIndex: 10 }}>
-        <h1 style={{ fontWeight: "bold", fontSize: "1.25rem" }}>Test Firm</h1>
-        <a href="/contact" style={{ background: "var(--primary-foreground)", color: "var(--primary)", padding: "8px 16px", borderRadius: "6px", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>Contact Us</a>
-      </nav>
+      <Header />
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
         <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "16px" }}>Welcome to Test Firm</h2>
         <p style={{ fontSize: "1.25rem", color: "var(--muted-foreground)", maxWidth: "600px", marginBottom: "32px" }}>We are a professional services company dedicated to excellence.</p>

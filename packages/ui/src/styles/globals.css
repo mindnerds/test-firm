@@ -6,6 +6,7 @@
   --primary-foreground: #ffffff;
   --muted-foreground: #737373;
   --border: #e5e5e5;
+  --phone: #2563eb;
 }
 body {
   margin: 0;
