@@ -21,7 +21,7 @@ export default function Home() {
         ))}
       </section>
       <footer style={{ padding: "32px", borderTop: "1px solid var(--border)", textAlign: "center", fontSize: "0.875rem", color: "var(--muted-foreground)" }}>
-        <p>&copy; 2026 Test Firm. All rights reserved.</p>
+        <p>&copy; 2025 Test Firm. All rights reserved.</p>
         <p>(555) 123-4567 · info@test-firm.com</p>
       </footer>
     </main>
