@@ -8,7 +8,10 @@ export default function Header() {
           (555) 123-4567
         </a>
       </div>
-      <a href="/contact" style={{ background: "var(--primary-foreground)", color: "var(--primary)", padding: "8px 16px", borderRadius: "6px", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>Contact Us</a>
+      <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <a href="/blog" style={{ color: "var(--primary-foreground)", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none", padding: "8px 12px" }}>Blog</a>
+        <a href="/contact" style={{ background: "var(--primary-foreground)", color: "var(--primary)", padding: "8px 16px", borderRadius: "6px", fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>Contact Us</a>
+      </div>
     </nav>
   );
 }
