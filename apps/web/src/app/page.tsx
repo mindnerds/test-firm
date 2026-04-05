@@ -5,7 +5,7 @@ export default function Home() {
     <main>
       <Header />
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
-        <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "16px" }}>Agent Verified</h2>
+        <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "16px" }}>Test Firm Works</h2>
         <p style={{ fontSize: "1.25rem", color: "var(--muted-foreground)", maxWidth: "600px", marginBottom: "32px" }}>Agent Pipeline Verified</p>
         <div style={{ display: "flex", gap: "16px" }}>
           <a href="/services" style={{ background: "var(--primary)", color: "var(--primary-foreground)", padding: "12px 24px", borderRadius: "8px", fontWeight: 500, textDecoration: "none" }}>Our Services</a>
