@@ -7,8 +7,9 @@ async function getPost(slug: string) {
   return await client.fetch(POST_BY_SLUG_QUERY, { slug });
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) {
     notFound();
@@ -28,7 +29,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               textDecoration: "none",
               fontSize: "0.875rem",
               marginBottom: "24px",
-              ":hover": { color: "var(--primary)" },
             }}
           >
             ← Back to Blog

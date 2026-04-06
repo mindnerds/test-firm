@@ -59,7 +59,6 @@ export default async function BlogPage() {
                       style={{
                         color: "var(--foreground)",
                         textDecoration: "none",
-                        ":hover": { color: "var(--primary)" },
                       }}
                     >
                       {post.title}
