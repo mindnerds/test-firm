@@ -14,6 +14,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@mindnerds/webworks-email-sdk':
+        specifier: 0.1.2
+        version: 0.1.2
       next:
         specifier: ^15.0.0
         version: 15.5.14(@babel/core@7.29.0)(@playwright/test@1.59.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1443,6 +1446,9 @@ packages:
     peerDependenciesMeta:
       markdown-it:
         optional: true
+
+  '@mindnerds/webworks-email-sdk@0.1.2':
+    resolution: {integrity: sha512-x3qGD96HOLA3ebc9nz015jAhx6z9XYfPZKVBT4MaSuCBJEzC7JQkv1EiiYnqF/dUGoQZNvYbpRR9CXFGjXhWCg==, tarball: https://npm.pkg.github.com/download/@mindnerds/webworks-email-sdk/0.1.2/94dc616cbcc08054d2269e750f2a9dcd0a86fabd}
 
   '@mux/mux-data-google-ima@0.3.15':
     resolution: {integrity: sha512-5u5VIWI6V0urhrZzka3nZdCcVL/po2LxWO7lW3QHeWmCjpkudY+OmLqzdbLLcqEXHsURRM2+M6O2k6LNVFNnLw==}
@@ -6238,6 +6244,10 @@ snapshots:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
       markdown-it: 14.1.1
+
+  '@mindnerds/webworks-email-sdk@0.1.2':
+    dependencies:
+      server-only: 0.0.1
 
   '@mux/mux-data-google-ima@0.3.15':
     dependencies:
